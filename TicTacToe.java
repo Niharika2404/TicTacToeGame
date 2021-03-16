@@ -17,6 +17,14 @@ public class TicTacToe {
 		System.out.println("Choose the letter: ");
 		return scan.next().toUpperCase().charAt(0);
 	}
+	private static void showBoard() {
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				System.out.print(" _ ");
+			}
+			System.out.println();
+		}
+	}
 	public static void main(String[] args) {
 		char[] board = createBoard();
 		chooseUserInputs();
@@ -24,6 +32,7 @@ public class TicTacToe {
 		char computer = '0';
 		System.out.println("choosen letter by player: " + person);
 		System.out.println("choosen letter by system: " + computer);
+		showBoard();
 	}
 
 }
