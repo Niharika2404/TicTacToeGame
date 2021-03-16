@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class TicTacToe {
 	private static char[] createBoard() {
 		char[] board = new char[10];
-		for(int i = 0; i < board.length; i++) {
-			board[i] = ' ';
+		for(int t = 0; t < board.length; t++) {
+			board[t] = ' ';
 		}
 		return board;
 	}
@@ -26,8 +26,22 @@ public class TicTacToe {
 		}
 	}
 	private static void makeAMove() {
-		int[] index = {0,1,2,3,4,5,6,7,8};
-		System.out.println("To make a move: " + index);
+		int i ;
+		int j;
+		System.out.println("To make a move: ");
+		if (i = 0) 
+			System.out.println("There is a free space");
+		else
+			System.out.println("There is not a free space");
+		
+		System.out.println("Good to go for the free space");
+	}
+	private static void checkFreeSpace() {
+		makeAMove();
+		if (char tij == ' ')
+			System.out.println("Space is empty, can make a move");
+		else
+			System.out.println("space is not empty, look for another space");
 	}
 	public static void main(String[] args) {
 		char[] board = createBoard();
@@ -38,6 +52,7 @@ public class TicTacToe {
 		System.out.println("choosen letter by system: " + computer);
 		showBoard();
 		makeAMove();
+		checkFreeSpace();
 	}
 
 }
