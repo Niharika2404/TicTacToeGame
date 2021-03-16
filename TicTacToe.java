@@ -25,6 +25,10 @@ public class TicTacToe {
 			System.out.println();
 		}
 	}
+	private static void makeAMove() {
+		int[] index = {0,1,2,3,4,5,6,7,8};
+		System.out.println("To make a move: " + index);
+	}
 	public static void main(String[] args) {
 		char[] board = createBoard();
 		chooseUserInputs();
@@ -33,6 +37,7 @@ public class TicTacToe {
 		System.out.println("choosen letter by player: " + person);
 		System.out.println("choosen letter by system: " + computer);
 		showBoard();
+		makeAMove();
 	}
 
 }
