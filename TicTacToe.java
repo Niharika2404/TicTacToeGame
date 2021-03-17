@@ -40,7 +40,7 @@ public class TicTacToe {
 	private static void checkFreeSpace() {
 		makeAMove();
 		char tij;
-		if (char[] tij == ' ')
+		if (char[] i == ' ')
 			System.out.println("Space is empty, can make a move");
 		else
 			System.out.println("space is not empty, look for another space");
@@ -51,11 +51,18 @@ public class TicTacToe {
 		sc.nextLine();
 		Random rm = new Random();
 		int ran_num = rm.nextInt(2);
-		if (user == ran_num)
+		
+		System.out.println("Change the move to the next player: " + ran_num);
+		
+		if (user == ran_num) {
 			return true;
-		else
+		}
+		else {
 			return false;
+		}
+		
 	}
+	
 	public static void main(String[] args) {
 		char[] board = createBoard();
 		chooseUserInputs();
@@ -66,6 +73,7 @@ public class TicTacToe {
 		showBoard();
 		makeAMove();
 		checkFreeSpace();
+		toss(Scanner );
 	}
 
 }
