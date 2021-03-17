@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -38,10 +39,22 @@ public class TicTacToe {
 	}
 	private static void checkFreeSpace() {
 		makeAMove();
-		if (char tij == ' ')
+		char tij;
+		if (char[] tij == ' ')
 			System.out.println("Space is empty, can make a move");
 		else
 			System.out.println("space is not empty, look for another space");
+	}
+	private boolean toss(Scanner sc) {
+		System.out.println("Choose between 1/0: ");
+		int user = sc.nextInt();
+		sc.nextLine();
+		Random rm = new Random();
+		int ran_num = rm.nextInt(2);
+		if (user == ran_num)
+			return true;
+		else
+			return false;
 	}
 	public static void main(String[] args) {
 		char[] board = createBoard();
